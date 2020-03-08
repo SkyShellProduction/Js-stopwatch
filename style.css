@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clocks-container{
+    margin: 0 auto;
+    width: 400px;
+    height: 500px;
+    background: rgb(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+}
+.stopwatch{
+    display: flex;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+.clocks-title{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Hanging Letters';
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+.stop-controls{
+    display: inline-block;
+    padding: 10px 0;
+    width: 45px;
+    background: rgb(0, 0, 0, 0.7);
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.stopW{
+    border-radius: 7px;
+    padding: 5px 2px;
+    background: rgb(54, 51, 51);
+    user-select: none;
+}
+.stopW:nth-child(2){
+    margin: 0 10px;
+}
+.clocks{
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.clocks-arrow{
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    
+}
+
+.clocks-arrow::before {
+    content: '';
+    display: block;
+    height: 12px;
+    background: #fff;
+    width: 100%;
+    margin-top: 12px;
+    transition: 0.4s;
+}
+.clocks-arrow.active::before{
+    background: black;
+    margin-top: 7px;
+} 
+.arr1{
+    transform: rotate(6deg);
+}
+.arr2{
+    transform: rotate(12deg);
+}
+.arr3{
+    transform: rotate(18deg);
+}
+.arr4{
+    transform: rotate(24deg);
+}
+.arr5{
+    transform: rotate(30deg);
+}
+.arr6{
+    transform: rotate(36deg);
+}
+.arr7{
+    transform: rotate(42deg);
+}
+.arr8{
+    transform: rotate(48deg);
+}
+.arr9{
+    transform: rotate(54deg);
+}
+.arr10{
+    transform: rotate(60deg);
+}
+.arr11{
+    transform: rotate(66deg);
+}
+.arr12{
+    transform: rotate(72deg);
+}
+.arr13{
+    transform: rotate(78deg);
+}
+.arr14{
+    transform: rotate(84deg);
+}
+.arr15{
+    transform: rotate(90deg);
+}
+.arr16{
+    transform: rotate(96deg);
+}
+.arr17{
+    transform: rotate(102deg);
+}
+.arr18{
+    transform: rotate(108deg);
+}
+.arr19{
+    transform: rotate(114deg);
+}
+.arr20{
+    transform: rotate(120deg);
+}
+.arr21{
+    transform: rotate(126deg);
+}
+.arr22{
+    transform: rotate(132deg);
+}
+.arr23{
+    transform: rotate(138deg);
+}
+.arr24{
+    transform: rotate(144deg);
+}
+.arr25{
+    transform: rotate(150deg);
+}
+.arr26{
+    transform: rotate(156deg);
+}
+.arr27{
+    transform: rotate(162deg);
+}
+.arr28{
+    transform: rotate(168deg);
+}
+.arr29{
+    transform: rotate(174deg);
+}
+.arr30{
+    transform: rotate(180deg);
+}
+.arr31{
+    transform: rotate(186deg);
+}
+.arr32{
+    transform: rotate(192deg);
+}
+.arr33{
+    transform: rotate(198deg);
+}
+.arr34{
+    transform: rotate(204deg);
+}
+.arr35{
+    transform: rotate(210deg);
+}
+.arr36{
+    transform: rotate(216deg);
+}
+.arr37{
+    transform: rotate(222deg);
+}
+.arr38{
+    transform: rotate(228deg);
+}
+.arr39{
+    transform: rotate(234deg);
+}
+.arr40{
+    transform: rotate(240deg);
+}
+.arr41{
+    transform: rotate(246deg);
+}
+.arr42{
+    transform: rotate(252deg);
+}
+.arr43{
+    transform: rotate(258deg);
+}
+.arr44{
+    transform: rotate(264deg);
+}
+.arr45{
+    transform: rotate(270deg);
+}
+.arr46{
+    transform: rotate(276deg);
+}
+.arr47{
+    transform: rotate(282deg);
+}
+.arr48{
+    transform: rotate(288deg);
+}
+.arr49{
+    transform: rotate(294deg);
+}
+.arr50{
+    transform: rotate(300deg);
+}
+.arr51{
+    transform: rotate(306deg);
+}
+.arr52{
+    transform: rotate(312deg);
+}
+.arr53{
+    transform: rotate(318deg);
+}
+.arr54{
+    transform: rotate(324deg);
+}
+.arr55{
+    transform: rotate(330deg);
+}
+.arr56{
+    transform: rotate(336deg);
+}
+.arr57{
+    transform: rotate(342deg);
+}
+.arr58{
+    transform: rotate(348deg);
+}
+.arr59{
+    transform: rotate(354deg);
+}
+.arr60{
+    transform: rotate(360deg);
+}
+.btn-start{
+    display: block;
+    padding: 10px 30px;
+    background: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 20px;
+    margin-top: 30px;
+    outline: none;
+}
+
+
