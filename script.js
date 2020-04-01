@@ -1,11 +1,50 @@
 let arrows = document.querySelectorAll('.clocks-arrow');
-let btnStart = document.querySelector('.btn-start');
+const btnStart = document.querySelector('.btn-start');
+let seconds = document.querySelector('.seconds'),
+        minutes = document.querySelector('.minutes'),
+        hours = document.querySelector('.hours');
 btnStart.addEventListener('click', function(e){
     e.preventDefault();
-    stopwatchActive(this);
+    if(this.innerHTML == 'start'){
+        this.innerHTML = 'stop';
+        setTimeout(stopwatchActive, 1000, this);
+    }
+    else if(this.innerHTML == 'stop'){
+        this.innerHTML = 'clear';
+    }
+    else{
+        this.innerHTML = 'start';
+        seconds.innerHTML = 0;
+        minutes.innerHTML = 0;
+        hours.innerHTML = 0;
+        for( let i of arrows){
+            i.classList.remove('active');
+            arrows[arrows.length - 1].classList.add('active');
+        }
+    }
+    
 })
 let i = 0;
-function stopwatchActive(){
+function stopwatchActive(btn){
+    if(btnStart.innerHTML == 'stop'){
+        arrowActive();
+        if(seconds.innerHTML < 59){
+            seconds.innerHTML++;
+        }
+        else if(seconds.innerHTML == 59){
+            seconds.innerHTML = 0;
+            minutes.innerHTML++;
+        }
+        if(seconds.innerHTML == 59 && minutes.innerHTML == 59){
+            seconds.innerHTML = 0;
+            minutes.innerHTML = 0;
+            hours.innerHTML++;
+        }
+        setTimeout(stopwatchActive, 1000);
+    }
+    
+}
+function arrowActive(){
     for (let i = 0; i < arrows.length; i++){
         arrows[i].classList.remove('active');
     }
@@ -15,22 +54,4 @@ function stopwatchActive(){
         i++;
     }
     if(i == arrows.length) i = 0;
-
-    let seconds = document.querySelector('.seconds'),
-    minutes = document.querySelector('.minutes'),
-    hours = document.querySelector('.hours');
-
-    if(seconds.innerHTML < 59){
-        seconds.innerHTML++;
-    }
-    else if(seconds.innerHTML == 59){
-        seconds.innerHTML = 0;
-        minutes.innerHTML++;
-    }
-    if(seconds.innerHTML == 59 && minutes.innerHTML == 59){
-        seconds.innerHTML = 0;
-        minutes.innerHTML = 0;
-        hours.innerHTML++;
-    }
-    setTimeout(stopwatchActive, 1000);
 }
