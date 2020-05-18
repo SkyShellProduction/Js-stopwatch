@@ -3,6 +3,7 @@ const btnStart = document.querySelector('.btn-start');
 let seconds = document.querySelector('.seconds'),
         minutes = document.querySelector('.minutes'),
         hours = document.querySelector('.hours');
+let i = 0;
 btnStart.addEventListener('click', function(e){
     e.preventDefault();
     if(this.innerHTML == 'start'){
@@ -22,12 +23,11 @@ btnStart.addEventListener('click', function(e){
             arrows[arrows.length - 1].classList.add('active');
         }
     }
-    
 })
-let i = 0;
+
 function stopwatchActive(btn){
+    arrowActive();
     if(btnStart.innerHTML == 'stop'){
-        arrowActive();
         if(seconds.innerHTML < 59){
             seconds.innerHTML++;
         }
@@ -53,5 +53,8 @@ function arrowActive(){
         arrows[i].classList.add('active');
         i++;
     }
-    if(i == arrows.length) i = 0;
+    else if(i == arrows.length) i = 0;
+    if(btnStart.innerHTML == 'clear') i = 0;
 }
+
+
