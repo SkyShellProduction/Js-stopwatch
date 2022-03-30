@@ -2,12 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    font-style: normal;
+    font-family: Arial, sans-serif;
 }
 .clocks-container{
     margin: 0 auto;
-    width: 400px;
-    height: 500px;
+    max-width: 400px;
+    width: 100%;
+    padding: 50px 0;
     background: rgb(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
@@ -32,24 +36,24 @@
 .stop-controls{
     display: inline-block;
     padding: 10px 0;
-    width: 45px;
+    width: 100%;
     background: rgb(0, 0, 0, 0.7);
     border-radius: 5px;
-    font-size: 20px;
     margin-bottom: 5px;
+    font-size: 20px;
 }
 .stopW{
     border-radius: 7px;
     padding: 5px 2px;
     background: rgb(54, 51, 51);
     user-select: none;
+    margin: 0 5px;
+    width: 50px;
 }
-.stopW:nth-child(2){
-    margin: 0 10px;
-}
+
 .clocks{
-    width: 270px;
-    height: 270px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background: grey;
     display: flex;
@@ -271,6 +275,24 @@
     border-radius: 20px;
     margin-top: 30px;
     outline: none;
+}
+
+@media(max-width: 500px){
+    .clocks{
+        width: 250px;
+        height: 250px;
+    }
+    .stop-controls{
+        padding: 5px 0;
+        font-size: 12px;
+    }
+    .stopW{
+        width: 37px;
+        font-size: 12px;
+    }
+    .clocks-arrow{
+        width: 2px;
+    }
 }
 
 
